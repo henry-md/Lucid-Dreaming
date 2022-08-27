@@ -1,0 +1,166 @@
+:root {
+    --text_background: #eee;
+    --code_color: #4a4a4a;
+    --code_color_light: #5d5d5d;
+
+    --settings_background: #334455;
+    --light_green: rgba(215, 231, 213, 0.95);
+    --lighter_green: rgba(224, 235, 222, 0.85);
+    --dark_green: rgba(134, 155, 134, 0.95);
+}
+
+/* So that it look bearable on different devices,
+even though it wasn't meant for other devices */
+* { font-size: 23px; }
+#message { font-size: 21px; }
+.settings_page_toggle { font-size: 18px; }
+
+@media only screen and (min-width: 1200px) {
+    * { font-size: 23px; }
+    #message { font-size: 21px; }
+    .settings_page_toggle { font-size: 18px; }
+}
+@media only screen and (max-width: 1200px) {
+    .flex { width: 75% !important; }
+    .flex-container { margin: 75px auto 0 auto !important; }
+}
+
+@media only screen and (max-width: 800px) {
+    .flex { width: 90% !important; }
+    * { font-size: 18px; }
+    #message { font-size: 16px; }
+    .settings_page_toggle { font-size: 15px; }  
+    input { margin: 0 !important; padding: 0 !important; }
+}
+
+@media only screen and (max-width: 600px) {
+    .flex { width: 90% !important; }
+}
+
+html {
+    width: 100%;
+    min-width: 285px;
+    min-height: 700px;  /* for phones, so background photo takes up full height */
+    position: fixed;
+    overflow: hidden;
+}
+
+body {
+    /* background-color: #f7f7f7; */
+    background-image: url('https://wallpaperaccess.com/full/52448.jpg'); /* Red & Blue Graffiti */
+    background-image: url('https://www.ge.com/news/sites/default/files/styles/full_header/public/Reports/2020-03/GE-ART-HERO-Rockwell-Kent-mural-1939-Worlds-Fair-Men-and-Volts-cover.jpg?itok=moe70OrN'); /* Fiction Book vibes */
+    background-image: url('https://www.yogjoshi.com/wp-content/uploads/2016/09/mountainscape-360_6.jpg'); /* Green landscape */
+    background-image: url('https://www.laphamsquarterly.org/sites/default/files/panorama1854-1855.jpg'); /* Civil War vibes *!*/
+    background-image: url('https://www.roomservice360.com/media/catalog/product/1/8/18064-01-panorama.jpg'); /* Black and white pencil drawing */
+    background-image: url('https://www.yogjoshi.com/wp-content/uploads/2016/09/mountainscape-360_6.jpg'); /* Green landscape */
+
+
+    background-repeat: repeat;
+    background-size: cover;
+    margin: 0; padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.code-text {
+    font-family: pt-mono, Courier-new, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    color: var(--code_color);
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 1px;
+}
+
+.flex-container {
+    margin: 100px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flex {
+    width: 60%;
+    border-radius: 20px;
+    background-color: var(--text_background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px var(--text_background);
+    justify-content: center;
+    margin: 10px auto 10px auto;
+    padding: 10px;
+    background-color: var(--light_green);
+}
+input, textarea {
+    background: var(--lighter_green);
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 3px;
+
+}
+
+.round {
+    /*border-radius: 60px; */
+}
+
+.header {
+    width: 100%;
+    margin: 0 0 0 30px;
+    text-align: left;
+    color: var(--code_color_light);
+    display: block;
+}
+
+.breakline {
+    width: 90%;
+    justify-self: flex-start;
+    margin: 0 auto 0 20px;
+    padding: 0;
+    border-bottom: 1px solid var(--dark_green);
+    display: block;
+}
+
+.interactive-container {
+    width: 100%;
+    margin: 30px 10px 15px 10px;
+    text-align: center;
+}
+
+/* SETTINGS ICON */
+.settings_page_toggle {
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--settings_background);
+    color: var(--text_background);
+    font-family: Arial, serif;
+    margin: 0;
+    padding: 3px 20px 3px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+}
+
+.fa_icon{
+    padding: 0 5px 0 0;
+    color: #fff;
+}
+
+/* form */
+.input-text { display: inline; }
+input { margin: 2px 0 2px 0; }
+/* input:not([type='submit']) { height: 20px; } */
+/* input[type='submit'] { height: 28px; margin-top: 20px; } */
+input:focus { outline: none; }
+.hidden { display: none; }
+#message { padding: 0 20px; text-align: center; }
+
+#interval, input {
+    height: 30px;
+}
+
+/* inline flex container */
+.inline-flex-container { margin: 10px auto 10px auto; position: relative; left: -35px; display: flex; align-items: center; }
+.inline-flex-span { font-size: 20px; color: black; background-color: #fff; width: 60px; align-text: center; border-radius: 10px; margin: 0 10px 0 0; }

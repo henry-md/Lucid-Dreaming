@@ -1,0 +1,66 @@
+<!-- https://pixabay.com/music/search/mood/relaxing/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Typing Helper</title>
+
+    <link rel="icon" href="images/typing_logo_trim.png">
+    <link href="style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">        <!-- Google Fonts -->
+    <script src="https://kit.fontawesome.com/3debb69ff0.js" crossorigin="anonymous"></script>     <!-- Font Awesome -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>      <!-- jQuery -->
+</head>
+<body>
+
+<a class="settings_page_toggle code-text" href="stats_page.html" >
+    <i class="fas fa-cog fa-lg fa_icon"></i>
+    SETTINGS
+</a>
+
+<div class="flex-container">
+    <div class="flex">
+        <div class="header code-text"> Lucid Dreaming </div>
+        <div class="breakline"></div>
+        <div class="code-text interactive-container">
+            <form id="form">
+                <label class="input-text">Start time: </label>
+                <input type="time" id="start-time" required><br>
+                <label class="input-text">End time: </label>
+                <input type="time" id="end-time" required><br>
+                <label class="input-text">Interval (mins): </label>
+                <input type="number" id="interval" min="10" max="60" value="20" required><br>
+    
+                <input value="Confirm" type="submit"></input>
+            </form>
+        </div>
+    </div>
+    <div id="message_container" class="flex round hidden">
+        <div id="message" class="code-text">Hello</div>
+    </div>
+
+    <!-- in case you need to test extra volume control -->
+    <!--<div class="inline-flex-container">
+        <span class="inline-flex-span"> -3 dB: </span>
+        <audio controls>
+            <source src="Assets/dream_check.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+    </div> -->
+    
+    <audio controls style="margin: 10px auto 10px auto;">
+        <source src="Assets/dream_check.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+</div>
+
+
+
+<script src='script.js'></script>
+
+</body>
+</html>
